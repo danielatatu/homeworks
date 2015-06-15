@@ -66,7 +66,7 @@ lista circulara formata va arata astfel:
 pozitiile in lista: 	0 1 2 3 4 5 	 6 		7 8 9 10 11 12
 numarul de seminte: 	1 0 1 1 1 1 	 S 		6 5 4  3  2  1
 			playerSeeds			   reversed 
-					  playerScore	opponentSeeds
+					 playerScore	opponentSeeds
 
 - numarul de seminte ce trebuie mutate va fi: noSeeds = 34
 - ultima casuta pe care pun seminte (casuta de stop) va fi: 9
@@ -80,11 +80,11 @@ numarul de seminte: 	1 0 1 1 1 1 	 S 		6 5 4  3  2  1
 	
  + + + + + +	+ 		+ + +
  + + + + + + 	+ 		+ + +  +  +  +
-	+ + + +	+ 		+ + +  +  +  +
+   + + + + + 		    + + +  +  +  +
  0 1 2 3 4 5 	6 		7 8 9 10 11 12
  3 2 4 4 4 4    S+3 		9 8 7  5  4  3
  playerSeeds		    reversed opponentSeeds
-		  playerScore
+		 playerScore
 
 Pentru AISimple am utilizat functia sortBy si, cu ajutorul unei functii ce compara 
 2 perechi casa-configuratie in functie de scorul obtinut de adversar, 
