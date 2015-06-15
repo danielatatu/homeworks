@@ -1,7 +1,7 @@
 Student: Daniela Florentina Tatu
 Grupa: 325 CA
 
-Avand in vedere comentariile consistente pe care le contin sursele mele, 
+Avand in vedere comentariile consistente pe care le contin sursele mele,  
 m-am gandit ca in acest fisier sa nu mai plictisesc cu detalii, 
 ci sa prezint ideea generala de implementare.
 
