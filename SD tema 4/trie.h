@@ -21,8 +21,7 @@ public:
 
 // Insereaza un element in trie, folosind recursivitatea
 	void insert ( entry& new_entry, int priority,
-						int *wd_num, int& dim, int level ) // T: Prin referinta 
-						                                    // am pus si dim
+					int *wd_num, int& dim, int level )
 	{
 	// pozitia unde trebuie continuata inserarea
 		int p = wd_num[level] - 2;
@@ -59,18 +58,9 @@ public:
 		if ( level == dim-1 )
 		{
 		// comportamentul "circular" al lui k
-			//if ( k > child[p]->words->nr_nodes )
-			//T: am comentat linia de mai sus pentru ca sigur trebuie sa ai
-			// cel putin un nod in treap daca ai introdus cuvintele deci era inutila
 			k = k % child[p]->words->nr_nodes;
                 
   			entry key;
-  			/*if ( k == 0 )
-  				key = child[p]->words->findMin();
-  			    else if ( k == 1 )
-  			    key = child[p]->words->findMax();
-  			else*/
-  			//T: Nu mai e nevoie de fnidMax si findMin, am explicat in treap
 		    key = child[p]->words->findK(k);
 
   		// incrementarea numarului de aparitii
@@ -79,7 +69,7 @@ public:
 			child[p]->words->insert ( child[p]->words, key, priority );
 
 		// afisarea
-			f << key.word << "\n"; //T: endl ingreuneaza , foloseste '\n
+			f << key.word << "\n";
 			return ;
 		}
 

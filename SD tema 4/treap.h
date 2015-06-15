@@ -56,9 +56,6 @@ public:
 			fatherPointer->left = aux->right;
 			aux->right = fatherPointer;
 			fatherPointer = aux;
-
-		//if ( ! fatherPointer->right->isNil() )
-		//T: Nu era necesar
 			fatherPointer->right->nr_nodes =
 				fatherPointer->right->left->nr_nodes +
 				fatherPointer->right->right->nr_nodes + 1;
@@ -74,9 +71,6 @@ public:
 			fatherPointer->right = aux->left;
 			aux->left = fatherPointer;
 			fatherPointer = aux;
-
-		//if ( ! fatherPointer->left->isNil() ) 
-		//T: Nu era necesar
 			fatherPointer->left->nr_nodes =
 				fatherPointer->left->left->nr_nodes +
 				fatherPointer->left->right->nr_nodes + 1;
@@ -110,7 +104,7 @@ public:
   }
 
 // Sterge un element din treap
-	void erase ( Treap<T> *&fatherPointer, T& key ) // T: Key nu era transmis prin parametru
+	void erase ( Treap<T> *&fatherPointer, T& key )
 	{
 		if ( this->isNil() )
 			return ;
@@ -147,53 +141,15 @@ public:
 	}
 
 // Gaseste elementul k din treap
-	T& findK(int k)
+	T& findK (int k)
 	{
-		/*if ( right->nr_nodes >= k )
-			return right->findK(k);
-		else
-		{
-			if ( k-1 == right->nr_nodes )
-				return key;
-			else
-				return left->findK (k - 1 - right->nr_nodes);
-		}
-		*/
-		
-		// T:Varianta mea de findK , nu mai ai nevoie de findMax si findMin
-		if(k < right->nr_nodes){
+		if (k < right->nr_nodes)
             return this->right->findK(k);
-        }
-
-        else if(k > right->nr_nodes){
+        else if (k > right->nr_nodes)
             return this->left->findK(k - right->nr_nodes - 1);
-        }
-
-        else {
+        else
             return this->key;
-        }
 	}
-
-// Gaseste elementul maxim din treap
-// regula de la BST
-	/*T& findMax()
-	{
-		if ( right->isNil() )
-			return key;
-		else
-			return right->findMax();
-	}
-*/
-// Gaseste elementul minim din treap
-// regula de la BST
-	/*T& findMin()
-	{
-		if ( left->isNil() )
-			return key;
-		else
-			return left->findMin();
-	}*/
-
 };
 
 #endif

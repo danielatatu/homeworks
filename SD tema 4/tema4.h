@@ -9,6 +9,7 @@ public:
 	string word;
 	int number;
 
+	// supraincarcarea operatorului >
 	bool operator> (entry& e)
 	{
 		if ( number > e.number )
@@ -19,6 +20,7 @@ public:
 			return false;
 	}
 
+	// supraincarcarea operatorului <
 	bool operator< (entry& e)
 	{
 		if ( number < e.number)
@@ -32,9 +34,6 @@ public:
 };
 
 void str_to_int (string& word, int *wd) {
-
-	//const char *w = word.c_str();
-	//T: Aici nu era necesar acel const char, poti lucra direct pe word
 
 	for ( unsigned int i = 0; i < word.size(); i++ )
 		if (word[i] >= 'a' && word[i] <= 'c')
@@ -56,21 +55,13 @@ void str_to_int (string& word, int *wd) {
 }
 
 void resolve_query (string& query, int *vect, int& n, int& k) {
-
-	//const char *q = query.c_str(); 
-	//T: Iar nu era nevoie de linia de mai sus
 	
-	for ( int i = 0; i < n; i++ ) {
+	for ( int i = 0; i < n; i++ )
 		vect[i] = query[i] - '0';
-	}
 
-	// daca exista '*' in sir 
-		//if ( i < n )
-			// calculam k
-    // T: Nu conteaza daca exista sau nu, se va executa forul doar daca exista
-    // T: De la pozitia '*' + 1 adica sare de steluta si merge sa ia cifrele de dupa
-			for ( unsigned int j = n + 1; j < query.size(); j++ )
-				k = k*10 + (query[j] - '0') ;
+	// forul se executa de la pozitia n + 1, adica parcurge cifrele de dupa '*'
+	for ( unsigned int j = n + 1; j < query.size(); j++ )
+		k = k*10 + (query[j] - '0') ;
 }
 
 #endif
