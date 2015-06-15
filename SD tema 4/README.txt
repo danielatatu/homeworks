@@ -15,13 +15,7 @@ Acest lucru este realizat cu ajutorul functiei "resolve_query" din "tema4.h".
 
 3. Atat stringul cat si numarul lui de aparitii sunt stocate in clasa "entry", tipul de date continut de "treap". 
 Implementarea structurii de date "Treap" am preluat-o din laborator, cu mici modificari:
-
-- "findK" intoarce a k-a intrare, incepand de la cea cu numar maxim de aparitii spre cea cu numar minim de aparitii
-
-- "findMax" intoarce cuvantul cu cel mai mare numar de aparitii ( utila cand nu exista *k )
-
-- "findMin" intoarce cuvantul cu cel mai mic numar de aparitii 
-( utila cand k este multiplu de numarul de elemente din treap )
+"findK" intoarce a k-a intrare, incepand de la cea cu numar maxim de aparitii spre cea cu numar minim de aparitii
 
 Observatie!
 
@@ -46,8 +40,8 @@ unde trebuie continuata inserarea; totodata reprezinta nivelul la care am ajuns 
 exemplu: pornim de la radacina ( level = 0 ); copilul unde trebuie sa inserez va fi pe pozitia "prima cifra din vector" - 2; 
 dupa prima inserare vom fi pe nivelul 1, verificand "cea de-a doua cifra din vector", etc. 
 
-- "find" : functie menita sa gaseasca stringul potrivit sirului de cifre introdus de utilizator si sa il afiseze in "date.out"; 
+- "find" : functie menita sa gaseasca stringul potrivit sirului de cifre introdus de utilizator si sa il afiseze in "date.out";
 gasirea pozitiei cuvantului in trie se face asemanator cu cea de la inserare: recursiv, din "copil" in "copil", pentru fiecare cifra; 
-dupa determinarea acestei pozitii se apeleaza metodele "findK" , "findMin" sau "findMax" din "Treap".
+dupa determinarea acestei pozitii se apeleaza metoda "findK" din "Treap".
 
 Pentru o intelegere mai buna a metodei de rezolvare pot fi citite comentariile din cadrul codului sursa.
