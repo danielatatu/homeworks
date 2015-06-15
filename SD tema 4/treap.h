@@ -96,10 +96,10 @@ public:
 			nr_nodes ++;
 		}
 
-		if ( left->priority > priority )
+		if ( left->priority > this->priority )
 			rotateRight ( fatherPointer );
 
-		else if ( right->priority > priority )
+		else if ( right->priority > this->priority )
 			rotateLeft ( fatherPointer );
   }
 
