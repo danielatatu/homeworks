@@ -80,7 +80,7 @@ numarul de seminte: 	1 0 1 1 1 1 	 S 		6 5 4  3  2  1
 	
  + + + + + +	+ 		+ + +
  + + + + + + 	+ 		+ + +  +  +  +
-   + + + + + 		    + + +  +  +  +
+   + + + + + 		    	+ + +  +  +  +
  0 1 2 3 4 5 	6 		7 8 9 10 11 12
  3 2 4 4 4 4    S+3 		9 8 7  5  4  3
  playerSeeds		    reversed opponentSeeds
