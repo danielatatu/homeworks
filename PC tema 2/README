@@ -1,0 +1,23 @@
+Student: Daniela Florentina Tatu
+Grupa: 325 CA
+
+Voi prezenta ideea generala de implementare.
+
+Am utilizat 4 clase aditionale:
+
+ ** Topology - retine o matrice ce are pe pozitia [i][j] costul legaturii i-j
+ Fiecare router are topologia proprie si o actualizeaza pe baza mesajelor primite de la vecini.
+ 
+ ** RoutingTable - retine un vector ce are pe pozitia i costul de la sursa (routerul ce retine tabela) 
+			catre routerul i, dar si next-hop-ul catre routerul i
+
+ ** Router - retine id-ul, topologia, tabela de rutare si un vector in care pe pozitia i 
+		se afla ultima versiune cunoscuta a routerului i
+
+ ** Network - contine informatii despre intreaga retea:
+ - numarul de routere si un vector al acestora (pe pozitia i se afla routerul i)
+ - numarul de evenimente si un vector al acestora
+ - numarul de mesaje rutabile si un vector al acestora
+
+Desfasurarea protocolului si modul in care actioneaza functiile din sim.h / sim.cpp 
+sunt descrise detaliat in comentariile surselor.
