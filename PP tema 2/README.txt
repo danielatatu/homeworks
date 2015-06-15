@@ -21,8 +21,8 @@ Pentru rularea globala, invocati din terminalul sistemului de operare:
 
 In continuare voi prezenta ideea generala de implementare:
 
-Tipul 'Board' re?ine informa?ii despre:
--- juc?torul care urmeaz? s? mute.
+Tipul 'Board' retine informatii despre:
+-- jucatorul care urmeaza sa mute.
 -- (scorul utilizatorului, scorul oponentului)
 -- numarul de seminte din fiecare casuta a utilizatorului
 -- numarul de seminte din fiecare casuta a adversarului
@@ -65,8 +65,8 @@ lista circulara formata va arata astfel:
 
 pozitiile in lista: 	0 1 2 3 4 5 	 6 		7 8 9 10 11 12
 numarul de seminte: 	1 0 1 1 1 1 	 S 		6 5 4  3  2  1
-				playerSeeds			   reversed 
-						  playerScore	opponentSeeds
+			playerSeeds			   reversed 
+					  playerScore	opponentSeeds
 
 - numarul de seminte ce trebuie mutate va fi: noSeeds = 34
 - ultima casuta pe care pun seminte (casuta de stop) va fi: 9
